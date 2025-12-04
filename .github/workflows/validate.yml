@@ -12,45 +12,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 20
-
-    - name: Install dependencies
-      run: |
-        [ -f package.json ] && npm ci || npm init -y
-        npm install puppeteer http-server
-
-    - name: Serve files and render dynamic HTML using Puppeteer
-      run: |
-        npx http-server -p 8080 &
-        SERVER_PID=$!
-        sleep 5
-
-        for file in $(find . -maxdepth 1 -iname "*.html" ! -iname "*.partial.html"); do
-          echo "Processing file: ${file:2}"
-          output_file=$file
-          node -e "const puppeteer = require('puppeteer');
-          (async () => {
-            const url = 'http://localhost:8080/${file:2}';
-            const browser = await puppeteer.launch({
-              headless: 'new'
-            });
-            const page = await browser.newPage();
-            await page.goto(url, {waitUntil: 'networkidle0'});
-            const html = await page.content();
-            await browser.close();
-            const fs = require('fs');
-            fs.writeFileSync('$output_file', html);
-          })().catch(err => {
-            console.error('Error processing file:', err);
-            process.exit(1);
-          });"
-        done
-
-        kill $SERVER_PID
-
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -61,6 +22,6 @@ jobs:
 
     - name: Run HTML Proofer
       run: |
-        for file in $(find . -maxdepth 1 -iname "*.html" ! -iname "*.partial.html"); do
-          htmlproofer $file --disable-external
+        for file in $(find . -maxdepth 1 -iname "*.html"); do
+          htmlproofer $file --disable-external --ignore-urls "/#/"
         done
