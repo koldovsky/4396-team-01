@@ -35,3 +35,4 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Mykhailo Zinych
 - Zyma Vladyslav
 - Hvozd Danylo
+- Tymofii Shyshka
