@@ -39,3 +39,4 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Fedorkiv Volodymyr
 - Vasyl Haida
 - Demyan Yurii
+- Oleksandr Hirnyi
