@@ -1,0 +1,49 @@
+<section class="cart">
+    <h2 class="cart-title">Shopping cart</h2>
+
+    <div class="cart-products">
+        <div class="cart-item">
+            <ul>
+                <li>
+                    <img class="item-image" src="img/cart/course-thumbnail.png" alt="Finance Course preview">
+                </li>
+                <a class="item-link" href="/course-money-mastery">
+                    <li>Finance Course "Money M..."</li>
+                </a>
+            </ul>
+            <div class="item-meta">
+                <span class="item-qty">1x</span>
+                <span class="item-price">$49,99USD</span>
+                <button class="item-remove" type="button" aria-label="Remove item"><img src="trash.png" alt="Trash"
+                        width="16"></button>
+            </div>
+        </div>
+    </div>
+    <div class="cart-promo">
+        <button class="promo-btn" type="button">Promo code</button>
+    </div>
+    <div class="cart-total">
+        <strong>Total:</strong> $49,99USD
+    </div>
+    <h3 class="order-title">Place an order</h3>
+    <form class="order-form" action="/order" method="post">
+
+        <div class="form-group">
+            <label for="name">Name <span class="asterisk">*</span></label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email <span class="asterisk">*</span></label>
+            <input id="email" name="email" type="email" placeholder="Your email address" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="Your phone">
+        </div>
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" placeholder="Your comment" rows="4"></textarea>
+        </div>
+        <button class="order-btn" type="submit">Order</button>
+    </form>
+</section>
