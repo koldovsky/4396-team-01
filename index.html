@@ -10,12 +10,7 @@
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
       crossorigin="anonymous"
     ></script>
-    <style>
-      img {
-        max-width: 300px;
-        height: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <!-- Volodymyr Fedorkiv  Start -->
@@ -59,6 +54,15 @@
       data-hx-swap="outerHTML"
       data-hx-get="index.main-showcase.partial.html"
       ></section>
+
+      <!-- Mykola Bobro -->
+      <section
+      class="showcase"
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.main-testimonials.partial.html"
+      ></section>
+
       <!-- Viacheslav Savchuk -->
       <section
       class="faq"
@@ -74,5 +78,10 @@
       <!--Zyma Vladyslav End-->
     </main>
     <footer class="footer"></footer>
+      <section
+          data-hx-trigger="load"
+          data-hx-get="cart.partial.html"
+          data-hx-swap="innerHTML">
+      </section>
   </body>
 </html>

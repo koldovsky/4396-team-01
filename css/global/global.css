@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-background-color: #e8eeef;
+  --ui-heading-color: #0c2133;
+  --title-font: "Raleway", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  /* temporary */
+  max-width: 400px;
+}
