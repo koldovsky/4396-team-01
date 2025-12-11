@@ -11,16 +11,32 @@
 
 :root {
   --header-background-color: #e8eeef;
+  --header-hero-onlyfor-color: rgba(3, 21, 37, 0.38);
   --ui-heading-color: #0c2133;
+  --header-main-color: #123479;
+  --header-secondary-color: #9aa83a;
+  --expert-bg: #f5f7fb;
+  --expert-text-main: #0b2340;
+  --expert-text-muted: #6c7280;
+  --expert-accent: #7cb342;
+  --expert-card-bg: #ffffff;
+  --expert-border: #e2e6f0;
+  --grey-text-color: #707070;
   --title-font: "Raleway", sans-serif;
   --offer-main-text-color: rgb(180, 180, 180);
   --offer-green-color: #9aa83a;
+  --bp-tablet: 767px;
+  --bp-desktop: 1024px;
   font-family: "Source Sans 3", sans-serif;
   scroll-behavior: smooth;
 }
 
+body {
+  color: var(--expert-text-main);
+  background-color: #ffffff;
+}
+
 img {
   display: block;
-  /* temporary */
-  max-width: 400px;
+  max-width: 100%;
 }
