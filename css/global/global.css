@@ -11,6 +11,7 @@
 
 :root {
   --header-background-color: #e8eeef;
+  --header-hero-onlyfor-color: rgba(3, 21, 37, 0.38);
   --ui-heading-color: #0c2133;
   --header-main-color: #123479;
   --header-secondary-color: #9aa83a;
@@ -20,17 +21,13 @@
   --expert-accent: #7cb342;
   --expert-card-bg: #ffffff;
   --expert-border: #e2e6f0;
-  --faq-answer-color: #707070;
+  --grey-text-color: #707070;
   --title-font: "Raleway", sans-serif;
   font-family: "Source Sans 3", sans-serif;
   scroll-behavior: smooth;
-  --expert-font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: var(--expert-font-main);
   color: var(--expert-text-main);
   background-color: #ffffff;
 }
@@ -38,6 +35,4 @@ body {
 
 img {
   display: block;
-  /* temporary */
-  max-width: 400px;
 }
