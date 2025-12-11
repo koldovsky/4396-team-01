@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--header-background-color);
+  padding-bottom: 74px; /* when i write without px it does not work, why? */
+
+  @media (min-width: 767px) {
+    padding-bottom: 130px;
+  }
+}
+
+.header__nav {
+  .header__promo {
+    background-color: var(--ui-heading-color);
+    color: var(--expert-card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    padding: 8px 15px;
+    font-weight: 400;
+    height: 36px;
+
+    .header__promo-highlight {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .header__promo-date {
+      font-weight: 700;
+      color: var(--header-secondary-color);
+    }
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}

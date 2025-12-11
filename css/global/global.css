@@ -23,6 +23,8 @@
   --expert-border: #e2e6f0;
   --grey-text-color: #707070;
   --title-font: "Raleway", sans-serif;
+  --bp-tablet: 767px;
+  --bp-desktop: 1024px;
   font-family: "Source Sans 3", sans-serif;
   scroll-behavior: smooth;
 }
@@ -31,7 +33,6 @@ body {
   color: var(--expert-text-main);
   background-color: #ffffff;
 }
-
 
 img {
   display: block;

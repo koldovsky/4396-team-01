@@ -1,12 +1,15 @@
-.header {
-  background-color: var(--header-background-color);
-  padding-bottom: 74px; /* when i write without px it does not work, why? */
-}
-
 .header__hero {
-  padding: 0 24px;
+  padding-inline: 24px;
+  max-width: 1024px;
+  margin-inline: auto;
+
   .header__hero-intro {
     text-align: left;
+
+    @media (min-width: 767px) {
+      /*why does it not work with variable? */
+      text-align: center;
+    }
 
     .header__hero-tagline {
       font-size: 12px;
@@ -19,6 +22,10 @@
       font-size: 56px;
       color: var(--ui-heading-color);
       font-weight: 600;
+
+      @media (min-width: 767px) {
+        font-size: 67px;
+      }
     }
 
     .header__hero-subtitle {
@@ -30,6 +37,17 @@
   }
   .header__hero-content {
     margin-top: 50px;
+
+    @media (min-width: 767px) {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header__hero-price-section {
+      @media (min-width: 767px) {
+        flex: 1;
+      }
+    }
 
     .header__hero-price-label {
       display: inline;
@@ -46,6 +64,13 @@
       font-size: 34px;
       color: var(--header-secondary-color);
       font-weight: 700;
+
+      @media (min-width: 767px) {
+        font-size: 42px;
+      }
+      @media (min-width: 1024px) {
+        font-size: 48px;
+      }
     }
 
     .header__hero-image--hands {
@@ -55,36 +80,50 @@
       object-fit: cover;
     }
   }
-  .header__hero-image-section {
+  .header__hero-media {
     margin-top: 20px;
 
-    .header__hero-image--coach {
+    @media (min-width: 767px) {
+      flex: 1;
+      margin-top: 0;
+    }
+
+    .header__hero-image-section .header__hero-image--coach {
       width: 100%;
       height: 100%;
       aspect-ratio: 1;
       object-fit: cover;
-    }
-  }
-  .header__hero-button {
-    margin-top: 33px;
-    justify-content: center;
-    text-align: center;
 
-    .header__hero-cta {
-      padding: 12px 30px;
-      margin: 10px;
-      border: 2px solid var(--header-secondary-color);
-      border-radius: 6px;
-      background-color: var(--header-secondary-color);
-      color: var(--expert-card-bg);
-      text-decoration: none;
-      font-size: 16.5px;
-      font-weight: 600;
+      @media (min-width: 767px) and (max-width: 1023px) {
+        aspect-ratio: 0.77/1;
+      }
+    }
+    .header__hero-button {
+      margin-top: 33px;
+      justify-content: center;
+      text-align: center;
+
+      .header__hero-cta {
+        padding: 12px 30px;
+        margin: 10px;
+        border: 2px solid var(--header-secondary-color);
+        border-radius: 6px;
+        background-color: var(--header-secondary-color);
+        color: var(--expert-card-bg);
+        text-decoration: none;
+        font-size: 16.5px;
+        font-weight: 600;
+      }
     }
   }
 
   .header__hero-info-section {
     margin-top: 33px;
+
+    @media (min-width: 767px) {
+      flex: 1;
+      margin-top: 0;
+    }
 
     .header__hero-details {
       list-style: none;
@@ -98,7 +137,6 @@
         align-items: center;
 
         .header__hero-detail-icon {
-          /*why when i change to span tag it does not working?*/
           display: inline-block;
           height: 18px;
           color: var(--header-secondary-color);
