@@ -13,6 +13,8 @@
   --header-background-color: #e8eeef;
   --ui-heading-color: #0c2133;
   --title-font: "Raleway", sans-serif;
+  --offer-main-text-color: rgb(180, 180, 180);
+  --offer-green-color: #9aa83a;
   font-family: "Source Sans 3", sans-serif;
   scroll-behavior: smooth;
 }

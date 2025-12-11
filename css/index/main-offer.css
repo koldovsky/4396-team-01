@@ -1,0 +1,74 @@
+.offer__block-special {
+    font-size: 12px;
+}
+
+.offer__block-title {
+    font-family: var(--title-font);
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.offer__block-text {
+    font-size: 19px;
+    color: var(--offer-main-text-color);
+}
+
+.offer-timer-number {
+    font-family: var(--title-font);
+    font-size: 36px;
+}
+
+.offer-timer-text {
+    font-size: 18px;
+    color: var(--offer-main-text-color);
+}
+
+.offer__block-join {
+    font-size: 15px;
+    color: var(--offer-main-text-color);
+    font-weight: 500;
+
+    .offer__block-join-text--white {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .offer__block-join-text--green {
+        color: var(--offer-green-color);
+        font-style: italic;
+    }
+}
+
+.offer__investment-title {
+    font-family: var(--title-font);
+    font-size: 24px;
+    color: var(--ui-heading-color);
+}
+
+.offer__investment-item {
+    font-size: 17px;
+    color: var(--offer-main-text-color);
+
+    .offer__investment-item-icon {
+        color: var(--offer-green-color);
+    }
+}
+
+.offer__investment-bonus {
+    font-size: 15px;
+    color: var(--ui-heading-color);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.offer__investment-button {
+    font-size: 16.5px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--offer-green-color);   
+    cursor: pointer;   
+    border: none;
+}
+.offer__investment-button:hover {
+    background-color: #0c2133;
+}
