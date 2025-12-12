@@ -10,7 +10,7 @@
 .header__nav {
   .header__promo {
     background-color: var(--ui-heading-color);
-    color: var(--expert-card-bg);
+    color: var(--ui-white-color);
     display: flex;
     align-items: center;
     justify-content: center;

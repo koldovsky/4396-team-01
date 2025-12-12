@@ -19,12 +19,11 @@
   --expert-text-main: #0b2340;
   --expert-text-muted: #6c7280;
   --expert-accent: #7cb342;
-  --expert-card-bg: #ffffff;
+  --ui-white-color: #ffffff;
   --expert-border: #e2e6f0;
   --grey-text-color: #707070;
   --title-font: "Raleway", sans-serif;
   --offer-main-text-color: rgb(180, 180, 180);
-  --offer-green-color: #9aa83a;
   --bp-tablet: 767px;
   --bp-desktop: 1024px;
   font-family: "Source Sans 3", sans-serif;

@@ -109,7 +109,7 @@
         border: 2px solid var(--header-secondary-color);
         border-radius: 6px;
         background-color: var(--header-secondary-color);
-        color: var(--expert-card-bg);
+        color: var(--ui-white-color);
         text-decoration: none;
         font-size: 16.5px;
         font-weight: 600;
