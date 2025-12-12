@@ -3,9 +3,9 @@
 
   .header__hero-intro {
     text-align: left;
+    margin-top: 40px;
 
     @media (min-width: 767px) {
-      /*why does it not work with variable? */
       text-align: center;
     }
 
@@ -13,6 +13,7 @@
       font-size: 12px;
       color: var(--header-main-color);
       font-weight: 700;
+      margin-bottom: 15px;
     }
 
     .header__hero-title {
@@ -96,6 +97,7 @@
         aspect-ratio: 0.77/1;
       }
     }
+
     .header__hero-button {
       margin-top: 33px;
       justify-content: center;

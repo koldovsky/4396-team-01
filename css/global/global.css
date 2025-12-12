@@ -25,6 +25,8 @@
   --offer-main-text-color: rgb(180, 180, 180);
   --bp-tablet: 767px;
   --bp-desktop: 1024px;
+  --transition-speed: 0.3s;
+
   font-family: "Source Sans 3", sans-serif;
   scroll-behavior: smooth;
 }
@@ -42,4 +44,8 @@ img {
 .container {
   max-width: 1200px;
   margin-inline: auto;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }

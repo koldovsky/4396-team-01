@@ -1,6 +1,6 @@
 .header {
   background-color: var(--header-background-color);
-  padding-bottom: 74px; /* when i write without px it does not work, why? */
+  padding-bottom: 74px;
 
   @media (min-width: 767px) {
     padding-bottom: 130px;
@@ -9,7 +9,7 @@
   .header__nav {
     .header__promo {
       background-color: var(--ui-heading-color);
-      color: var(--ui-white-color);
+      color: var(--header-background-color);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -30,6 +30,157 @@
 
       @media (max-width: 1023px) {
         display: none;
+      }
+    }
+    .header__nav-inner {
+      height: 80px;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .header__logo {
+        font-family: var(--title-font);
+        font-weight: 600;
+        font-size: 25px;
+        text-wrap: nowrap;
+
+        a {
+          text-decoration: none;
+          color: var(--ui-heading-color);
+        }
+
+        .header__logo-accent {
+          color: var(--header-secondary-color);
+          font-weight: 700;
+        }
+      }
+
+      .header__nav-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        a {
+          color: var(--ui-heading-color);
+        }
+
+        ul {
+          list-style: none;
+        }
+
+        .header__social-item {
+          fill: var(--header-secondary-color);
+        }
+
+        .header__nav-menu {
+          display: flex;
+          align-items: center;
+          gap: 43px;
+          font-size: 15px;
+          font-weight: 500;
+          margin: 0 auto;
+        }
+
+        .header__social {
+          justify-content: flex-end;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+      }
+
+      .header__burger {
+        display: none;
+        background: none;
+        border: none;
+      }
+
+      @media (max-width: 1023px) {
+        .header__nav-content {
+          position: fixed;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          height: 0px;
+          background-color: var(--header-background-color);
+          transition: height var(--transition-speed);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          .header__nav-menu {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 80px;
+
+            a {
+              font-size: 17px;
+            }
+          }
+        }
+
+        .header__burger {
+          display: block;
+          margin-left: auto;
+          z-index: 101;
+          background: none;
+          border: none;
+          cursor: pointer;
+          position: relative;
+          width: 24px;
+          height: 24px;
+
+          .header__burger-line,
+          .header__burger-line::before,
+          .header__burger-line::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--ui-heading-color);
+            transition: var(--transition-speed);
+            position: absolute;
+            left: 0;
+            transform-origin: center;
+          }
+
+          .header__burger-line::before {
+            transform: translateY(-8px);
+          }
+          .header__burger-line {
+            transform: translateY(0);
+          }
+          .header__burger-line::after {
+            transform: translateY(8px);
+          }
+        }
+
+        .header__burger.is-active .header__burger-line::before {
+          transform: translateY(0) rotate(45deg);
+        }
+        .header__burger.is-active .header__burger-line {
+          background-color: transparent;
+        }
+        .header__burger.is-active .header__burger-line::after {
+          transform: translateY(0) rotate(-45deg);
+        }
+
+        .header__nav-menu,
+        .header__social {
+          opacity: 0;
+          transition: opacity var(--transition-speed);
+        }
+
+        .header__nav-content.is-open {
+          height: calc(100vh - 80px);
+
+          .header__nav-menu,
+          .header__social {
+            opacity: 1;
+          }
+        }
       }
     }
   }
