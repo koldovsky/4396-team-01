@@ -1,0 +1,57 @@
+.cart {
+  box-sizing: border-box;
+  width: calc(100% - 32px);   
+  max-width: 420px;           
+  margin: 16px auto;          
+  background: white;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(5, 15, 30, 0.12);
+  color: black;
+  position: relative;         
+  max-height: calc(100vh - 40px); 
+  overflow: auto;
+}
+.cart-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-products {
+  margin: 8px 0 12px;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+.cart-item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.item-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item-meta {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+/* Если тут это есть значит я забыл дописать код */
