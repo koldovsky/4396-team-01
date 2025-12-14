@@ -104,3 +104,44 @@
             color: rgba(255, 255, 255, 0.6);
             font-weight: 400;
         }
+
+
+        /* Responsive Design */
+        @media (max-width: 767px) {
+            .footer__nav {
+                padding: 40px 20px 20px;
+            }
+
+            .footer__nav-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .footer__nav-menu {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .footer__logo {
+                font-size: 24px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .footer__nav-content {
+                gap: 30px;
+            }
+            
+            .footer__nav-menu {
+                gap: 20px;
+            }
+        }
