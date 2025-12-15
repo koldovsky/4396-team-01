@@ -24,7 +24,8 @@
 
 
 
-        padding-left: 0px 15px;
+        padding-left: 15px;
+        padding-right: 15px;
 
         font-family: "Source Sans 3", sans-serif;
         font-size: 17px;
@@ -189,11 +190,27 @@
 }
 
 
-@media (min-width: 701px) {
-    .testimonial-title__text {
-        font-family: "Raleway", sans-serif; 
-        font-size: 42px;
+@media (min-width: 900px) {
+    .testimonial {
+        .testimonials__header {
 
+            .testimonial-title__text {
+                font-size: 41px;
+                height: auto;
+            }
+        }
     }
 }
 
+
+@media (min-width: 701px) {
+    .testimonial {
+        .testimonials__header {
+
+            .testimonial-title__text {
+                font-size: 48px;
+                height: auto;
+            }
+        }
+    }
+}
