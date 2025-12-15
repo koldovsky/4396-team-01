@@ -18,6 +18,8 @@
   --grey-text-color: #707070;
   --title-font: "Raleway", sans-serif;
   --offer-main-text-color: rgb(180, 180, 180);
+  --footer-nav-color: rgba(255, 255, 255, 0.1);
+  --footer-copyright-color: rgba(255, 255, 255, 0.6);
   --bp-tablet: 767px;
   --bp-desktop: 1024px;
   --transition-speed: 0.3s;

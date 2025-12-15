@@ -13,7 +13,7 @@
             flex-wrap: wrap;
             gap: 40px;
             padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid var(--footer-nav-color);
         }
 
         .footer__logo {
@@ -99,7 +99,7 @@
         .footer__created,
         .footer__copyright {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--footer-copyright-color);
             font-weight: 400;
         }
 
