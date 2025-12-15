@@ -1,6 +1,6 @@
 /* Footer Styles */
         .footer__nav {
-            background: #1a2332;
+            background: var(--ui-heading-color);
             color: var(--ui-white-color);
             padding: 60px 40px 30px;
             font-family: "Source Sans 3", sans-serif;
