@@ -39,13 +39,16 @@
 }
 .item-link {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1.5px;
   font-weight: 600;
   display: inline-block;
   max-width: 160px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
 }
 .item-meta {
   margin-left: auto;
@@ -54,4 +57,48 @@
   gap: 10px;
   font-size: 14px;
 }
-/* Если тут это есть значит я забыл дописать код */
+.cart-promo {
+  margin: 10px 0;
+}
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.order-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+.order-form .form-group {
+  margin-top: 10px;
+}
+.order-form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: white;
+  font-size: 14px;
+  resize: vertical;
+}
+.order-btn {
+  width: 140px;
+  display: block;
+  margin: 16px auto 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #95a600;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
