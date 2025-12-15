@@ -260,7 +260,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .expert__container {
     max-width: 1240px;
     padding: 0 40px;
@@ -286,7 +286,6 @@
     align-items: start;
   }
 
-  /* CARD */
   .expert-card {
     width: 400px;
     max-width: 400px;
