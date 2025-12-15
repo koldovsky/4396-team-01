@@ -1,235 +1,340 @@
-/* Section */
+/* Section Expert provided by Vasyl Haida */
 
 .expert {
-  padding: 80px 16px 100px;
-  background-color: var(--expert-bg);
+  padding: 56px 16px 72px;
+  background: var(--expert-bg);
 }
 
 .expert__container {
-  max-width: 1120px;
+  max-width: 360px;
   margin: 0 auto;
   text-align: center;
 }
 
 .expert__eyebrow {
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 30px;
+
   font-size: 12px;
-  font-weight: 600;
-  color: var(--expert-text-muted);
-  margin: 0 0 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--header-main-color);
+}
+
+.expert__eyebrow::before,
+.expert__eyebrow::after {
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--expert-accent);
 }
 
 .expert__title {
-  margin: 0 0 16px;
+  margin: 0 0 28px;
   font-size: 40px;
-  line-height: 1.15;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--expert-text-main);
 }
 
 .expert__subtitle {
-  margin: 0 0 48px;
-  font-size: 16px;
+  margin: 0 auto 34px;
+  max-width: 320px;
+  font-size: 20px;
+  line-height: 1.7;
   color: var(--expert-text-muted);
 }
 
-/* Layout */
-
 .expert__grid {
   display: grid;
-  grid-template-columns: minmax(0, 380px) minmax(0, 1.4fr);
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: start;
 }
-
-@media (max-width: 900px) {
-  .expert__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .expert__container {
-    text-align: left;
-  }
-
-  .expert__title,
-  .expert__subtitle {
-    text-align: left;
-  }
-}
-
-/* Left card */
 
 .expert-card {
-  background-color: var(--expert-card-bg);
-  border-radius: 18px;
-  box-shadow: 0 18px 45px rgba(11, 35, 64, 0.08);
+  width: 100%;
+  max-width: 286px;
+  margin: 0 auto;
+  background: var(--expert-card-bg);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.10);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
-.expert-card__image-wrapper {
-  position: relative;
-  overflow: hidden;
+.expert-card__image-wrapper { 
+  padding: 22px 22px 0; 
 }
 
 .expert-card__image {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
+  border-radius: 12px;
   object-fit: cover;
+  aspect-ratio: 20 / 20;
 }
 
 .expert-card__content {
-  padding: 24px 32px 28px;
+  padding: 18px 22px 22px;
   text-align: center;
 }
 
 .expert-card__name {
-  margin: 0 0 18px;
-  font-size: 18px;
+  margin: 14px 0 28px;
+  font-size: 24px;
   font-weight: 600;
+  color: var(--expert-text-main);
 }
-
-/* Socials */
 
 .expert-card__socials {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .expert-card__social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: var(--expert-accent);
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--expert-accent);
+  padding: 7px;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
-  color: #1a2b3c;
+  color: #fff;
 }
-
-.expert-card__social-icon {
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.expert-card__social-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-  opacity: 0.95;
-}
-
-/* Right info block */
 
 .expert-info {
   text-align: left;
+  padding: 0 30px;
 }
 
 .expert-info__title {
-  margin: 0 0 20px;
-  font-size: 26px;
-  line-height: 1.4;
+  margin: 0 0 16px;
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 600;
+  color: var(--expert-text-main);
 }
 
 .expert-info__highlight {
   color: var(--expert-accent);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .expert-info__text {
-  margin: 0 0 28px;
-  font-size: 15px;
+  margin: 0 0 26px;
+  font-size: 18px;
   color: var(--expert-text-muted);
-  max-width: 620px;
 }
 
-/* List */
-
-.expert-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 12px;
-  background-color: #ffffff;
-  border: 1px solid var(--expert-border);
+.expert-list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
 }
 
 .expert-list__item {
-  display: flex;
-  padding: 18px 22px;
-  gap: 14px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  column-gap: 12px;
+  padding: 18px 0;
 }
 
 .expert-list__icon {
-  flex: 0 0 22px;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: var(--expert-accent);
-  position: relative;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.expert-list__icon::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border-radius: 50%;
-  background-color: #ffffff;
-}
-
-.expert-list__content {
-  flex: 1;
+.expert-list__icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--expert-accent);
 }
 
 .expert-list__title {
   margin: 0 0 4px;
   font-size: 14px;
-  font-weight: 600;
-  color: var(--expert-text-main);
+  font-weight: 800;
+  color: var(--header-main-color);
 }
 
 .expert-list__description {
   margin: 0;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--expert-text-muted);
 }
 
 .expert-list__divider {
   height: 1px;
-  background-color: var(--expert-border);
-  list-style: none;
-  margin: 0 22px;
+  background: var(--expert-border);
+  margin: 0;
 }
 
-/* Small screens tweaks */
-
-@media (max-width: 600px) {
-  .expert {
-    padding: 56px 16px 72px;
+@media (min-width: 768px) {
+  .expert__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
   }
 
   .expert__title {
-    font-size: 30px;
+    font-size: 44px;
+    line-height: 1.12;
   }
 
-  .expert-info__title {
-    font-size: 22px;
+  .expert__subtitle {
+    max-width: 760px;
+    font-size: 16px;
+    margin: 0 auto 44px;
+  }
+
+  .expert__grid {
+    grid-template-columns: 260px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .expert-card {
+    width: 260px;
+    margin: 0;
+    height: 100%;
+  }
+
+  .expert-card__image-wrapper {
+    padding: 20px 20px 0;
+  }
+
+  .expert-card__image {
+    aspect-ratio: 2 / 4;
+    border-radius: 12px;
+    object-fit: cover;
   }
 
   .expert-card__content {
-    padding: 20px 20px 24px;
+    padding: 16px 20px 22px;
   }
 
-  .expert-list__item {
-    padding: 16px 16px;
+  .expert-card__name {
+    margin: 14px 0 14px;
+    font-size: 20px;
   }
 
-  .expert-list__divider {
-    margin: 0 16px;
+  .expert-card__socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 140px;
+    margin: 0 auto;
+  }
+
+  .expert-card__social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+  }
+
+  .expert-info {
+    text-align: left;
+    padding-top: 26px;
+  }
+
+  .expert-info__title {
+    font-size: 26px;
+    line-height: 1.35;
+    margin: 0 0 14px;
+  }
+
+  .expert-info__text {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 0 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .expert__container {
+    max-width: 1240px;
+    padding: 0 40px;
+    text-align: center;
+  }
+
+  .expert__title {
+    font-size: 46px;
+    line-height: 1.12;
+    max-width: 900px;
+    margin: 0 auto 18px;
+  }
+
+  .expert__subtitle {
+    font-size: 18px;
+    max-width: 720px;
+    margin: 0 auto 64px;
+  }
+
+  .expert__grid {
+    grid-template-columns: 400px 1fr;
+    gap: 96px;
+    align-items: start;
+  }
+
+  .expert-card {
+    width: 400px;
+    max-width: 400px;
+  }
+
+  .expert-card__image-wrapper {
+    padding: 24px 24px 0;
+  }
+
+  .expert-card__image {
+    aspect-ratio: 5 / 4;
+    border-radius: 14px;
+  }
+
+  .expert-card__content {
+    padding: 18px 24px 26px;
+  }
+
+  .expert-card__name {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .expert-card__socials {
+    max-width: none;
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
+
+  .expert-card__social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .expert-info {
+    padding-top: 0;
+  }
+
+  .expert-info__title {
+    font-size: 32px;
+    line-height: 1.4;
+    max-width: 720px;
+    margin-bottom: 18px;
+  }
+
+  .expert-info__text {
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 680px;
+    margin-bottom: 28px;
   }
 }

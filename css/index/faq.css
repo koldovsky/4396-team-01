@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: var(--expert-card-bg);
+  background-color: var(--ui-white-color);
 
   .faq__image-container {
     width: 100%;

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 *,
@@ -15,18 +14,34 @@
   --ui-heading-color: #0c2133;
   --header-main-color: #123479;
   --header-secondary-color: #9aa83a;
-  --expert-bg: #f5f7fb;
-  --expert-text-main: #0b2340;
-  --expert-text-muted: #6c7280;
-  --expert-accent: #7cb342;
-  --expert-card-bg: #ffffff;
-  --expert-border: #e2e6f0;
+  --ui-white-color: #ffffff;
   --grey-text-color: #707070;
   --title-font: "Raleway", sans-serif;
   --offer-main-text-color: rgb(180, 180, 180);
-  --offer-green-color: #9aa83a;
   --bp-tablet: 767px;
   --bp-desktop: 1024px;
+  --transition-speed: 0.3s;
+
+   /* Backgrounds */
+  --expert-bg: #f5f7fb;
+
+  /* Text */
+  --expert-text-main: #0b2340;
+  --expert-text-muted: #6c7280;
+  --expert-eyebrow-text: #2c5aa0;
+  --expert-list-title-text: #1f4b8f;
+
+  /* Accent */
+  --expert-accent: #7cb342;
+
+  /* Borders / dividers */
+  --expert-border: #e2e6f0;
+  --expert-divider: #e6edf6;
+
+  /* Shadows */
+  --expert-card-shadow: rgba(16, 24, 40, 0.10);
+  --expert-card-shadow-hover: rgba(16, 24, 40, 0.18);
+
   font-family: "Source Sans 3", sans-serif;
   scroll-behavior: smooth;
 }
@@ -39,4 +54,13 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }

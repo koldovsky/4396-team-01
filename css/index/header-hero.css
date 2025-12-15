@@ -1,13 +1,11 @@
 .header__hero {
   padding-inline: 24px;
-  max-width: 1200px;
-  margin-inline: auto;
 
   .header__hero-intro {
     text-align: left;
+    margin-top: 40px;
 
     @media (min-width: 767px) {
-      /*why does it not work with variable? */
       text-align: center;
     }
 
@@ -15,6 +13,7 @@
       font-size: 12px;
       color: var(--header-main-color);
       font-weight: 700;
+      margin-bottom: 15px;
     }
 
     .header__hero-title {
@@ -98,6 +97,7 @@
         aspect-ratio: 0.77/1;
       }
     }
+
     .header__hero-button {
       margin-top: 33px;
       justify-content: center;
@@ -109,7 +109,7 @@
         border: 2px solid var(--header-secondary-color);
         border-radius: 6px;
         background-color: var(--header-secondary-color);
-        color: var(--expert-card-bg);
+        color: var(--ui-white-color);
         text-decoration: none;
         font-size: 16.5px;
         font-weight: 600;

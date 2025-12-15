@@ -34,7 +34,7 @@
     }
 
     .offer__block-join-text--green {
-        color: var(--offer-green-color);
+        color: var(--header-secondary-color);
         font-style: italic;
     }
 }
@@ -50,7 +50,7 @@
     color: var(--offer-main-text-color);
 
     .offer__investment-item-icon {
-        color: var(--offer-green-color);
+        color: var(--header-secondary-color);
     }
 }
 
@@ -65,7 +65,7 @@
     font-size: 16.5px;
     font-weight: 600;
     color: #fff;
-    background-color: var(--offer-green-color);   
+    background-color: var(--header-secondary-color);   
     cursor: pointer;   
     border: none;
 }
