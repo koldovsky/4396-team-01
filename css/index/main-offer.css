@@ -1,74 +1,196 @@
+.offer {
+    background: linear-gradient(rgba(5, 25, 45, 0.9),
+            rgba(5, 25, 45, 0.9)),
+        url(../../img/offer/hand-shake.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 90px;
+}
+
+.offer__container {
+    @media (max-width: 1195px) {
+        padding-inline: 24px;
+    }
+}
+
+.offer__block {
+    padding-top: 90px;
+}
+
 .offer__block-special {
     font-size: 12px;
+    color: var(--ui-white-color);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span {
+        color: var(--offer-main-secondary-color);
+    }
 }
 
 .offer__block-title {
     font-family: var(--title-font);
-    font-size: 48px;
+    font-size: clamp(34px, 1.59vw + 28.91px, 48px);
     font-weight: 600;
+    color: var(--ui-white-color);
+    margin-top: 20px;
 }
 
 .offer__block-text {
     font-size: 19px;
     color: var(--offer-main-text-color);
-}
-
-.offer-timer-number {
-    font-family: var(--title-font);
-    font-size: 36px;
-}
-
-.offer-timer-text {
-    font-size: 18px;
-    color: var(--offer-main-text-color);
+    margin-top: 25px;
+    font-weight: 600;
 }
 
 .offer__block-join {
-    font-size: 15px;
+    font-size: 14px;
     color: var(--offer-main-text-color);
-    font-weight: 500;
+    margin-top: 20px;
 
     .offer__block-join-text--white {
         cursor: pointer;
         text-decoration: underline;
+        font-weight: 700;
+        color: var(--ui-white-color);
     }
 
     .offer__block-join-text--green {
         color: var(--header-secondary-color);
         font-style: italic;
     }
-}
+} 
 
-.offer__investment-title {
-    font-family: var(--title-font);
-    font-size: 24px;
-    color: var(--ui-heading-color);
-}
+.offer__block-timer {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
 
-.offer__investment-item {
-    font-size: 17px;
-    color: var(--offer-main-text-color);
+    .offer__block-timer__item {
+        min-width: 0;
+        flex: 1;
+        display: grid;
+        justify-items: center;
+        text-align: center;
 
-    .offer__investment-item-icon {
-        color: var(--header-secondary-color);
+        &&:not(:last-child) {
+            border-right: 1px solid var(--offer-main-border-color);
+        }
+    }
+
+    .offer-timer-number {
+        font-family: var(--title-font);
+        font-size: clamp(18px, calc(5.14px + 4.02vw), 36px);
+        color: var(--ui-white-color);
+        font-weight: 600;
+        align-items: center;
+    }
+
+    .offer-timer-text {
+        font-size: clamp(14px, calc(7.57px + 1.99vw), 23px);
+        color: var(--offer-main-text-color);
     }
 }
 
-.offer__investment-bonus {
-    font-size: 15px;
-    color: var(--ui-heading-color);
-    font-weight: 500;
-    font-style: italic;
+.offer__investment {
+    background-color: var(--offer-main-background-color);
+    margin-top: 50px;
+    padding: 30px 30px;
+    border-radius: 8px;
+
+    .offer__investment-title {
+        font-family: var(--title-font);
+        font-size: clamp(22px, calc(21.27px + 0.23vw), 24px);
+        color: var(--ui-heading-color);
+        font-weight: 600;
+    }
+
+    .offer__investment-items {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        list-style: none;
+
+        .offer__investment-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 17px;
+            color: var(--offer-main-li-text-color);
+
+            .offer__investment-item-icon {
+                color: var(--header-secondary-color);
+                width: 20px;
+                height: 20px;
+            }
+
+            .offer__investment-item-text {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .offer__investment-bonus {
+        margin-top: 20px;
+        font-size: 15px;
+        color: var(--ui-heading-color);
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .offer__investment-button {
+        margin-top: 35px;
+        padding: 18px 35px;
+        border-radius: 5px;
+        font-size: 16.5px;
+        font-weight: 600;
+        color: var(--ui-white-color);
+        background-color: var(--header-secondary-color);
+        cursor: pointer;
+        border: none;
+        font-family: inherit;
+        line-height: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .offer__investment-button:hover {
+        background-color: #0c2133;
+    }
 }
 
-.offer__investment-button {
-    font-size: 16.5px;
-    font-weight: 600;
-    color: #fff;
-    background-color: var(--header-secondary-color);   
-    cursor: pointer;   
-    border: none;
-}
-.offer__investment-button:hover {
-    background-color: #0c2133;
+
+
+@media (min-width: 768px) {
+    .offer__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 150px;
+        align-items: stretch;
+    }
+
+    .offer__investment {
+        margin: 90px 0 0 0;
+        flex: 1;
+        max-width: 353px;
+    }
+
+    .offer__block {
+        flex: 2;
+    }
+
+    .offer__block-timer {
+        .offer-timer-number {
+            font-size: clamp(18px, calc(-11.08px + 3.92vw), 36px);
+        }
+
+        .offer-timer-text {
+            font-size: clamp(14px, calc(-2.43px + 1.94vw), 23px);
+        }
+    }
+
+    .offer__block-join {
+        margin-top: 30px;
+    }
 }
