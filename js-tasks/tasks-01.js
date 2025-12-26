@@ -20,72 +20,6 @@ function rps(p1, p2) {
   return "Player 2 won!";
 }
 
-// https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
-
-function rps(p1, p2) {
-  if (p1 === p2) {
-    return "Draw!";
-  }
-
-  if (p1 === "scissors" && p2 === "paper") {
-    return "Player 1 won!";
-  }
-
-  if (p1 === "rock" && p2 === "scissors") {
-    return "Player 1 won!";
-  }
-
-  if (p1 === "paper" && p2 === "rock") {
-    return "Player 1 won!";
-  }
-
-  return "Player 2 won!";
-}
-
-// https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
-
-function rps(p1, p2) {
-  if (p1 === p2) {
-    return "Draw!";
-  }
-
-  if (p1 === "scissors" && p2 === "paper") {
-    return "Player 1 won!";
-  }
-
-  if (p1 === "rock" && p2 === "scissors") {
-    return "Player 1 won!";
-  }
-
-  if (p1 === "paper" && p2 === "rock") {
-    return "Player 1 won!";
-  }
-
-  return "Player 2 won!";
-}
-
-// https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
-
-function rps(p1, p2) {
-  if (p1 === p2) {
-    return "Draw!";
-  }
-
-  if (p1 === "scissors" && p2 === "paper") {
-    return "Player 1 won!";
-  }
-
-  if (p1 === "rock" && p2 === "scissors") {
-    return "Player 1 won!";
-  }
-
-  if (p1 === "paper" && p2 === "rock") {
-    return "Player 1 won!";
-  }
-
-  return "Player 2 won!";
-}
-
 // -------- Vasyl Haida Start --------------------------------------------------------------
 // https://www.codewars.com/kata/convert-a-string-to-an-array/train/javascript
 function stringToArray(string){
@@ -154,3 +88,69 @@ function isDivisible(n, x, y) {
 }
 
 // -------------------- Vasyl Haida End ----------------------------------
+
+// -------------------- Vasyl Haida 2 lesson START -----------------------
+
+// https://www.codewars.com/kata/geometry-basics-circle-circumference-in-2d/train/javascript
+function circleCircumference(circle) {
+  return 2 * Math.PI * circle.radius;
+}
+
+// https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
+
+function giveMeFive(obj){
+  const result = [];
+
+  for (const key in obj) {
+    if (key.length === 5) {
+      result.push(key);
+    }
+    if (String(obj[key]).length === 5) {
+      result.push(obj[key]);
+    }
+  }
+
+  return result; 
+}
+
+// https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
+function buildFun(n) {
+  const res = [];
+  for (let i = 0; i < n; i++) {
+    res.push(function () {
+      return i;
+    });
+  }
+  return res;
+}
+
+// https://www.codewars.com/kata/fun-with-es6-classes-number-2-animals-and-inheritance/train/javascript
+class Shark extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 0, 'shark', status);
+  }
+}
+
+class Cat extends Animal {
+  // Do the same here as you did for Shark - define your constructor function and any other methods you need
+  constructor(name, age, status) {
+    super(name, age, 4, 'cat', status);
+  }
+  introduce() {
+    return `${super.introduce()}  Meow meow!`;
+  }
+}
+
+class Dog extends Animal {
+  // On your own now - you can do it :D
+  constructor(name, age, status, master) {
+    super(name, age, 4, 'dog', status);
+    this.master = master;
+  }
+
+  greetMaster() {
+    return `Hello ${this.master}`;
+  }
+}
+
+// -------------------- Vasyl Haida 2 lesson END -----------------------
