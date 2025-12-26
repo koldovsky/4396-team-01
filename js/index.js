@@ -1,6 +1,7 @@
 function init() {
   import("./global.header-burger.js");
   import("./global.main-partners.js");
+  import("./global.main-expert.js");
 }
 
 const totalPartials = document.querySelectorAll(

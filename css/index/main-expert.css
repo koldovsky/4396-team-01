@@ -10,6 +10,29 @@
   margin: 0 auto;
   text-align: center;
 }
+.expert-clock {
+  margin: 18px auto 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--ui-white-color);
+  border: 1px solid var(--expert-border);
+}
+
+.expert-clock__label {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--expert-text-muted);
+}
+
+.expert-clock__time {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--expert-text-main);
+}
 
 .expert__eyebrow {
   display: inline-flex;
@@ -176,12 +199,91 @@
   margin: 0;
 }
 
+.gallery {
+  padding: 24px 16px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.gallery__title {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ui-heading-color);
+  text-align: center;
+}
+
+.gallery__slider {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  gap: 10px;
+  align-items: center;
+}
+
+.gallery__viewport {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.10);
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery__btn {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--expert-accent);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gallery__btn:active {
+  transform: translateY(1px);
+}
+
+.gallery__dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.gallery__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(0,0,0,.20);
+  cursor: pointer;
+}
+
+.gallery__dot.is-active {
+  width: 22px;
+  background: var(--expert-accent);
+}
+
 @media (min-width: 768px) {
   .expert__container {
     max-width: 1120px;
     margin: 0 auto;
     padding: 0 24px;
     text-align: center;
+  }
+
+  .expert-clock__time { 
+    font-size: 18px; 
   }
 
   .expert__title {
@@ -257,6 +359,13 @@
     line-height: 1.8;
     max-width: 620px;
     margin: 0 0 22px;
+  }
+
+  .gallery {
+    padding: 36px 16px;
+  }
+  .gallery__title {
+    font-size: 20px;
   }
 }
 

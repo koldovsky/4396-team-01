@@ -6,6 +6,10 @@
         <p class="expert__title">
             Real strategies. Real results. Real-life finance
         </p>
+        <div class="expert-clock" aria-label="Live clock">
+            <span class="expert-clock__label">Local time</span>
+            <time class="expert-clock__time" id="expertClock">00:00:00</time>
+        </div>
         <p class="expert__subtitle">
             You don’t need more overwhelm — just someone who’s walked the path and gets it.
         </p>
@@ -122,4 +126,23 @@
             </div>
         </div>
     </div>
+    <section class="gallery">
+      <h3 class="gallery__title">Gallery</h3>
+    
+      <div class="gallery__slider" data-slider>
+        <button class="gallery__btn gallery__btn--prev" type="button" data-prev aria-label="Previous">
+          ‹
+        </button>
+    
+        <div class="gallery__viewport">
+          <img class="gallery__img" data-img alt="Gallery image" />
+        </div>
+    
+        <button class="gallery__btn gallery__btn--next" type="button" data-next aria-label="Next">
+          ›
+        </button>
+      </div>
+    
+      <div class="gallery__dots" data-dots></div>
+    </section>
 </section>
