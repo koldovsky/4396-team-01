@@ -2,6 +2,7 @@ function init() {
   import("./global.header-burger.js");
   import("./global.main-partners.js");
   import("./global.main-expert.js");
+  import("./global.main-testimonials.js");
 }
 
 const totalPartials = document.querySelectorAll(
