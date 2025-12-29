@@ -11,18 +11,38 @@ const files = [
   "modern-design-8.webp",
 ];
 
-const images = files.map((name) => folder + name);
+let index = 0;
+let images = [];
 
+// load images from api
+try {
+  const res = await fetch("api/showcase-expert.json");
+  const data = await res.json();
+  if (data?.images?.length) {
+    images = data.images;
+  } else {
+    images = files.map((name) => folder + name);
+  }
+
+} catch (error) {
+  console.error("Failed to load showcase.json", e);
+  images = files.map((name) => folder + name);
+}
+
+// helpers
+ const withQuality = (url) =>
+    url + (url.includes("?") ? "&" : "?") + "auto=compress&cs=tinysrgb&w=1200";
+
+// selector staff
 const slider = document.querySelector("[data-slider]");
 const imgEl = document.querySelector("[data-img]");
 const prevBtn = document.querySelector("[data-prev]");
 const nextBtn = document.querySelector("[data-next]");
 const dotsWrap = document.querySelector("[data-dots]");
 
-let index = 0;
 
 function render() {
-  imgEl.src = images[index];
+  imgEl.src = withQuality(images[index]);
   imgEl.alt = `Showcase image ${index + 1}`;
 
   [...dotsWrap.children].forEach((dot, i) => {
