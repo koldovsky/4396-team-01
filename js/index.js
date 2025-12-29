@@ -1,7 +1,8 @@
 function init() {
   import("./global.header-burger.js");
   import("./global.main-partners.js");
-  import("./global.main-expert.js");
+  import("./global.main-expert-carousel.js");
+  import("./global.main-expert-clock.js");
   import("./global.main-testimonials.js");
 }
 
