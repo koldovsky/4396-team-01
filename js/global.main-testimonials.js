@@ -130,3 +130,5 @@ const btnPrev = document.querySelector(".prev");
 
 btnNext.addEventListener("click", nextSlide);
 btnPrev.addEventListener("click", prevSlide);
+
+window.addEventListener('resize' , () => showSlide(currentSlideIndex))
