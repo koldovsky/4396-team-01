@@ -4,6 +4,7 @@ function init() {
   import("./global.main-expert-carousel.js");
   import("./global.main-expert-clock.js");
   import("./global.main-testimonials.js");
+  import("./global.main-offer-cooldown.js");
 }
 
 const totalPartials = document.querySelectorAll(
