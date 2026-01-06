@@ -51,8 +51,35 @@
             enroll today and start your transformation.</em
           >
         </p>
+        <div class="results_timer">
+          <p class="results_timer_text">Limited Time offer ends in:</p>
+          <div class="timer_display">
+            <div class="time_unit">
+              <span id="days">00</span>
+              <span class="time_label">Days</span>
+            </div>
+            <span class="colon">:</span>
+            <div class="time_unit">
+              <span id="hours">00</span>
+              <span class="time_label">Hours</span>
+            </div>
+            <span class="colon">:</span>
+            <div class="time_unit">
+              <span id="minutes">00</span>
+              <span class="time_label">Minutes</span>
+            </div>
+            <span class="colon">:</span>
+            <div class="time_unit">
+              <span id="seconds">00</span>
+              <span class="time_label">Seconds</span>
+            </div>
+          </div>
+        </div>
         <div class="results_block_button">
-          <button class="results_button_shoping_cart">
+          <button
+            class="results_button_shoping_cart"
+            onclick="document.querySelector('.cart-toggle-btn').click()"
+          >
             <span>Join Course Now</span>
           </button>
         </div>
