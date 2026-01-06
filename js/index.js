@@ -5,6 +5,7 @@ function init() {
   import("./global.main-expert-clock.js");
   import("./global.main-testimonials.js");
   import("./global.main-offer-cooldown.js");
+  import("./cart.js")
 }
 
 const totalPartials = document.querySelectorAll(

@@ -1,4 +1,6 @@
+<div class="cart-overlay"></div>
 <section class="cart">
+    <button class="cart-close" aria-label="Close cart">✖</button>
     <h2 class="cart-title">Shopping cart</h2>
 
     <div class="cart-products">
@@ -14,19 +16,25 @@
             <div class="item-meta">
                 <span class="item-qty">1x</span>
                 <span class="item-price">$49,99USD</span>
-                <button class="item-remove" type="button" aria-label="Remove item"><img src="img/cart/trash.png" alt="Trash"
-                        width="16"></button>
+                <button class="item-remove" type="button" aria-label="Remove item"><img src="img/cart/trash.png"
+                        alt="Trash" width="16"></button>
             </div>
         </div>
     </div>
     <div class="cart-promo">
-        <button class="promo-btn" type="button">Promo code</button>
+        <button class="promo-btn" type="button" aria-expanded="false" aria-controls="promo-input">Promo
+            code</button>
+        <div id="promo-input" class="promo-input" aria-hidden="true">
+            <input id="promo-code" name="promo-code" type="text" placeholder="Enter promo code" />
+            <button class="promo-apply" type="button">Apply</button>
+        </div>
     </div>
+
     <div class="cart-total">
         <strong>Total:</strong> $49,99USD
     </div>
     <h3 class="order-title">Place an order</h3>
-    <form class="order-form" action="/order" method="post">
+    <form class="order-form" action="#" method="post">
 
         <div class="form-group">
             <label for="name">Name <span class="asterisk">*</span></label>
@@ -46,4 +54,14 @@
         </div>
         <button class="order-btn" type="submit">Order</button>
     </form>
+</section>
+<button class="cart-toggle-btn">Join our course</button>
+
+<section id="cart-empty-modal" class="cart-modal cart-empty">
+    <button class="cart-close" aria-label="Close cart">✖</button>
+    <h2 class="cart-title">Shopping cart</h2>
+    <div class="cart-empty-message">
+        <strong>Shopping cart is empty</strong>
+        <p>Continue shopping to add product to your cart</p>
+    </div>
 </section>
