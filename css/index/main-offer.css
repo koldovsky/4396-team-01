@@ -60,7 +60,7 @@
         color: var(--header-secondary-color);
         font-style: italic;
     }
-} 
+}
 
 .offer__block-timer {
     display: flex;
@@ -159,7 +159,6 @@
         background-color: #0c2133;
     }
 }
-
 
 
 @media (min-width: 768px) {
