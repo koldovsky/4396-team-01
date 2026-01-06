@@ -201,6 +201,11 @@
     padding: 0 24px 80px;
   }
 
+  .results_button_shoping_cart {
+    width: 100%;
+    text-align: center;
+  }
+
   .results_content_grid_inner {
     max-width: 100%;
     gap: 32px 32px;
@@ -248,10 +253,7 @@
     padding: 24px;
   }
 
-  .results_button_shoping_cart {
-    width: 100%;
-    text-align: center;
-  }
+  
 
   .results_content_title_text {
     font-size: 20px;

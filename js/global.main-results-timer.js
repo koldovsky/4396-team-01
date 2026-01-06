@@ -1,4 +1,3 @@
-// Set the target date for the countdown (7 days from now)
 const targetDate = new Date();
 targetDate.setDate(targetDate.getDate() + 7);
 
@@ -25,8 +24,6 @@ function updateTimer() {
   document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
 }
 
-// Update the timer every second
 setInterval(updateTimer, 1000);
 
-// Initial call
 updateTimer();
