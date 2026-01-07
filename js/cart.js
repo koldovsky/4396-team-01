@@ -58,5 +58,24 @@
     });
 
 })();
+(function initPromoCode() {
+    const applyBtn = document.querySelector(".promo-apply");
+    const promoInput = document.getElementById("promo-code");
+    const promoImage = document.querySelector(".promo-image");
+
+    if (!applyBtn || !promoInput || !promoImage) return;
+
+    applyBtn.addEventListener("click", () => {
+        const code = promoInput.value.trim();
+
+        if (code === "Hämis123") {
+            promoImage.style.display = "block";
+        } else {
+            promoImage.style.display = "none";
+            alert("Invalid promo code");
+        }
+    });
+})();
+
 
 
